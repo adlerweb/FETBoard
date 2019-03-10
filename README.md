@@ -13,10 +13,29 @@ The board was a quick'n'dirty solution to get some of my connections done. It wa
 
 * NodeMCU or Arduino Pro Mini (duh!)
 * Enough female pin headers to accommodate the controller mentioned. Use the spring loaded type, turned ones won't fit the controllers pins.
-* Any 3mm Screw Terminals
+* Any 5.08mm Screw Terminals
 * 7 x SI2302DS
 * 7 x Resistor for SI2302DS - something between 500Ω and 5kΩ should be OK. Lower values lead to less losses when using PWM, higher ones don't stress the controller as much.
 * 7 x Resistor for inputs - Anything you're comfortable with. Some 10s of kΩ should be a good compromise
 
-# Known bugs
-* NodeMCU-footprint is incorrect. Only plug in the right side (D0, etc). You'll loose only Vin.
+## Pinout
+
+| Side   | Pin | NodeMCU | Pro Mini |
+|--------|-----|---------|----------|
+| Input  | 1 (Left)   | GND     | GND      |
+| Input  | 2   | D6 (JP1)| D7 (JP1) |
+| Input  | 3   | D5 (JP2)| D4 (JP2) |
+| Input  | 4   | N/C     | A3       |
+| Input  | 5   | 3       | A2       |
+| Input  | 6   | D8      | A1       |
+| Input  | 7   | D7      | A0       |
+| Output | 8   | D0      | D2       |
+| Output | 1 (Left)  | Vin     | RAW      |
+| Output | 2   | D6 (JP1)| D7 (JP1) |
+| Output | 3   | D5 (JP2)| D4 (JP2) |
+| Output | 4   | N/C     | D9       |
+| Output | 5   | D4      | D8       |
+| Output | 6   | D3      | D6       |
+| Output | 7   | D2      | D5       |
+| Output | 8   | D1      | D3       |
+
